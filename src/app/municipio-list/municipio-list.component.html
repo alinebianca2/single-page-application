@@ -1,4 +1,13 @@
 <div>
     <h1>Municípios</h1>
- </div>
+    <select>
+      <option value="RS">Rio Grande do Sul</option>
+      <option value="SP">São Paulo</option>
+    </select>
+    <ul>
+      <li *ngFor="let municipio of municipios">
+        {{ municipio.name }} (Código IBGE: {{ municipio.ibge_code }})
+      </li>
+    </ul>
+  </div>
   
