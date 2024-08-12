@@ -170,15 +170,7 @@
 </style>
 
 <main class="main">
-  <mat-form-field appearance="fill">
-    <mat-label>Escolha uma opção</mat-label>
-    <mat-select [(value)]="selectedOption">
-      <mat-option *ngFor="let option of options" [value]="option.value">
-        {{ option.viewValue }}
-      </mat-option>
-    </mat-select>
-  </mat-form-field>
-  <p>Opção selecionada: {{ selectedOption }}</p>
+<app-municipio-selector></app-municipio-selector>
 </main>
 
 <router-outlet />

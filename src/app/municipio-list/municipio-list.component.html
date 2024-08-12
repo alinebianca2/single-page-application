@@ -1,13 +1,15 @@
-<div>
-    <h1>Municípios</h1>
-    <select>
-      <option value="RS">Rio Grande do Sul</option>
-      <option value="SP">São Paulo</option>
-    </select>
-    <ul>
-      <li *ngFor="let municipio of municipios">
-        {{ municipio.name }} (Código IBGE: {{ municipio.ibge_code }})
-      </li>
-    </ul>
-  </div>
-  
+<div class="container">
+  <mat-form-field appearance="fill">
+    <mat-label>Estado</mat-label>
+    <mat-select (selectionChange)="onUfChange($event.value)">
+      <mat-option *ngFor="let uf of ufs" [value]="uf">{{ uf }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Cidade</mat-label>
+    <mat-select>
+      <mat-option *ngFor="let municipio of municipios" [value]="municipio.ibge_code">{{ municipio.name }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
